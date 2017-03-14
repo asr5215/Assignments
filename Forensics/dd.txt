@@ -1,0 +1,3 @@
+C:\Users\Alex\Desktop\Assignments\Forensics\Programs\dd\dd.exe
+C:\Users\Alex\Desktop\Assignments\Forensics\Programs\sleuthkit-4.4.0-win32\bin\mmls.exe
+80510976

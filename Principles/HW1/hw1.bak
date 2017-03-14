@@ -1,0 +1,111 @@
+#lang racket
+
+(define-namespace-anchor a)
+(define ns (namespace-anchor->namespace a))
+
+(define cross-product (lambda (lst1 lst2)
+	(cond
+	((null? lst1) '())
+        ((null? lst2) '())
+	(else (cons (cphelper (car lst1) lst2) (cross-product (cdr lst1)  lst2))))))
+
+(define cphelper (lambda (a lst)
+	(cond
+	((null? lst) '())
+	(else (cons (* a (car lst)) (cphelper a (cdr lst)))))))
+
+(define add
+  (lambda (lst)
+    (apply + lst)))
+
+(define absum
+  (lambda (lst)
+    (cond
+      ((null? lst) 0)
+      (else (abs (addrecursive lst))))))
+
+(define addrecursive
+  (lambda (lst)
+    (cond
+      ((null? lst) 0)
+      (else (+ (car lst) (addrecursive (cdr lst)))))))
+
+(define multiply
+  (lambda (lst)
+    (cond
+      ((null? lst) 1)
+      (else (* (car lst) (multiply(cdr lst)))))))
+
+(define subtract
+  (lambda (lst)
+    (cond
+      ((null? lst) 0)
+      (else (- (car lst) (addrecursive (cdr lst)))))))
+
+(define average
+  (lambda (lst)
+    (cond
+      ((null? lst) 0)
+      (else (/ (addrecursive lst) (length lst))))))
+
+(define minhelper
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      ((null? (cdr lst)) (car lst))
+      (else (min (car lst) (minhelper (cdr lst)))))))
+
+(define maxhelper
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      ((null? (cdr lst)) (car lst))
+      (else (max (car lst) (maxhelper (cdr lst)))))))
+
+(define minmax
+  (lambda (lst)
+    (cons (minhelper lst) (list(maxhelper lst)))))  
+
+(define x2
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      (else (cons (* 2 (car lst)) (x2 (cdr lst)))))))
+
+(define x3
+  (lambda (lst)
+    (cond
+      ((null? lst) '())
+      (else (cons (* 3 (car lst)) (x3 (cdr lst)))))))
+
+(define plus
+  (lambda (lst1 lst2)
+    (map + lst1 lst2)))
+
+(define times
+  (lambda (lst1 lst2)
+    (cond
+      ((null? lst1) '())
+      (else (cons (* (car lst1) (car lst2)) (times (cdr lst1) (cdr lst2)))))))
+
+(define minus
+  (lambda (lst1 lst2)
+    (cond
+      ((null? lst1) '())
+      (else (cons (- (car lst1) (car lst2)) (minus (cdr lst1) (cdr lst2)))))))
+
+(define helper
+  (lambda (lst)
+    (cond
+      ((not(list? lst)) "Illegal value for an s-expression.")
+      ((not(list? (car lst))) lst)
+      ((eqv? (cadr lst) 'min) (minhelper (helper (car lst))))
+      ((eqv? (cadr lst) 'max) (maxhelper (helper(car lst))))
+      ((null? (cddr lst)) ((eval (cadr lst) ns) (helper (car lst))))
+      (else ((eval (cadr lst) ns) (helper (car lst)) (helper (caddr lst)))))))
+
+(define interpreter
+  (lambda (question)
+    (write (helper question)) (newline) (interpreter (read))))
+
+(interpreter (read))

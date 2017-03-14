@@ -1,0 +1,30 @@
+file system analysis:
+	hierarichal representation of files
+	
+file system: organization
+	file system
+	content
+	meta data
+	file name
+	application
+
+content data:
+	data unit for file system is:
+		cluster for windows
+		block for unix based
+	
+usually use tools to look at contents, why not do it manually?
+	the contents are huge, the number of partitions are huge
+	
+LBA address: 0, 1, ..., n-1
+Hard disk is n sectors large
+the volume has its own numbering system, starting at 0.
+
+fragmented file is a file that doesnt have all of its blocks together
+
+content analysis:
+	block analysis
+	physical analysis
+	logical file analysis
+	allocation status
+	consistency checks

@@ -1,0 +1,184 @@
+md5
+3 mod - 16
+Number of copies tested: 430063
+Number of collisions: 0
+Elapsed time: 1.3457055seconds
+
+sha1
+3 mod - 16
+Number of copies tested: 430063
+Number of collisions: 0
+Elapsed time: 0.998693517seconds
+
+sha256
+3 mod - 16
+Number of copies tested: 430063
+Number of collisions: 0
+Elapsed time: 1.279358434seconds
+
+md5
+4 mod - 16
+Number of copies tested: 6819567
+Number of collisions: 0
+Elapsed time: 21.014497464seconds
+
+sha1
+4 mod - 16
+Number of copies tested: 6819567
+Number of collisions: 0
+Elapsed time: 12.907925708seconds
+
+sha256
+4 mod - 16
+Number of copies tested: 6819567
+Number of collisions: 0
+Elapsed time: 17.538411865seconds
+
+md5
+5 mod - 16
+Number of copies tested: 108130031
+Number of collisions: 0
+Elapsed time: 289.560298383seconds
+
+sha-1
+5 mod - 16
+Number of copies tested: 108130031
+Number of collisions: 0
+Elapsed time: 216.67861618seconds
+
+sha-256
+5 mod - 16
+Number of copies tested: 108130031
+Number of collisions: 0
+Elapsed time: 289.678968139seconds
+
+helloworld
+md5
+2 mod - 62
+Number of copies tested: 34037
+Number of collisions: 0
+Elapsed time: 0.070121539seconds
+
+sha-1
+2 mod - 62
+Number of copies tested: 34037
+Number of collisions: 0
+Elapsed time: 0.054801269seconds
+
+sha-256
+2 mod - 62
+Number of copies tested: 34037
+Number of collisions: 0
+Elapsed time: 0.066911998seconds
+
+md5
+3 mod - 62
+Number of copies tested: 1875809
+Number of collisions: 0
+Elapsed time: 2.668496455seconds
+
+sha-1
+3 mod - 62
+Number of copies tested: 1875809
+Number of collisions: 0
+Elapsed time: 1.994167229seconds
+
+sha-256
+3 mod - 62
+Number of copies tested: 1875809
+Number of collisions: 0
+Elapsed time: 2.689000744seconds
+
+md5
+4 mod - 62
+Number of copies tested: 101762149
+Number of collisions: 0
+Elapsed time: 153.920729235seconds
+
+sha-1 
+4 mod - 62
+Number of copies tested: 101762149
+Number of collisions: 0
+Elapsed time: 116.270251546seconds
+
+sha-256
+4 mod - 62
+Number of copies tested: 101762149
+Number of collisions: 0
+Elapsed time: 150.235074882seconds
+
+
+input1
+
+md5
+2 mod - 62
+Number of copies tested: 170189
+Number of collisions: 0
+Elapsed time: 0.270260526seconds
+
+sha-1
+2 mod - 62
+Number of copies tested: 170189
+Number of collisions: 0
+Elapsed time: 0.210617788seconds
+
+sha-256
+2 mod - 62
+Number of copies tested: 170189
+Number of collisions: 0
+Elapsed time: 0.273736069seconds
+
+md5
+3 mod - 62
+Number of copies tested: 10317233
+Number of collisions: 0
+Elapsed time: 16.408419648seconds
+
+sha-1
+3 mod - 62
+Number of copies tested: 10317233
+Number of collisions: 0
+Elapsed time: 12.47813962seconds
+
+sha-256
+3 mod - 62
+Number of copies tested: 10317233
+Number of collisions: 0
+Elapsed time: 16.067049702seconds
+
+large
+md5
+2 mod - 62
+Number of copies tested: 427365
+Number of collisions: 0
+Elapsed time: 1.063927401seconds
+
+sha-1
+2 mod - 62
+Number of copies tested: 427365
+Number of collisions: 0
+Elapsed time: 0.787487705seconds
+
+sha-256
+2 mod - 62
+Number of copies tested: 427365
+Number of collisions: 0
+Elapsed time: 1.059830906seconds
+
+md5
+3 mod - 62
+Number of copies tested: 26262145
+Number of collisions: 0
+Elapsed time: 66.761831043seconds
+
+sha-1
+3 mod - 62
+Number of copies tested: 26262145
+Number of collisions: 0
+Elapsed time: 48.702729287seconds
+
+sha-256
+3 mod - 62
+Number of copies tested: 26262145
+Number of collisions: 0
+Elapsed time: 70.32527263seconds
