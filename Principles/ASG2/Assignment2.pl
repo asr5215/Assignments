@@ -57,14 +57,18 @@ etonH([], []).
 etonH([H | T], [A1 | A2]) :- etonH(T, A2), def(A1, H).
 
 %3)
-countconsonants(N, E) :- name(N, List), countC(List, E).
+isvowel(a).
+isvowel(e).
+isvowel(i).
+isvowel(o).
+isvowel(u).
+countconsonants(N, E) :- atom_chars(N, List), countC(List, E).
 countC([], 0).
-countC([H | T], E) :- H =\= 97, H =\= 101, H =\= 105, H =\= 111, H =\= 117, countC(T, E1), E is E1 + 1.
-countC([H | T], E) :- countC(T, E).
+countC([H | T], E) :- not(isvowel(H)), countC(T, E1), E is E1 + 1.
+countC([H | T], E) :- isvowel(H), countC(T, E).
 %E = [97, 101, 105, 111, 117].
 
 %4)
-eqv(45, negative).
 eqv(0, zero).
 eqv(1, one).
 eqv(2, two).

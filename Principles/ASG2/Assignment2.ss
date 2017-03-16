@@ -3,7 +3,12 @@
 (define (consEmpty) '(()))
 
 (define consTree (lambda (parent child1 child2)
-  (cons (cons parent (append child1 child2)) '())))
+  (cond
+    ((not(number? parent)) (print "All node values must be numbers"))
+    ((and (null? (car child1)) (null? (car child2))) (cons parent (append child1 child2)))
+    ((null? (car child1)) (cons parent (append child1 (cons child2 '()))))
+    ((null? (car child2)) (cons parent (append (cons child1 '()) child2)))
+    (else (cons parent (append (cons child1 '()) (cons child2 '())))))))
 
 ;(define consTree (lambda (parent child1 child2)
 ;  (cond
@@ -17,23 +22,23 @@
 
 (define sum (lambda (lst)
   (cond
-    ((null? (car lst)) 0)
-    (else (+ (caar lst) (+ (sum (cdar lst)) (sum (cddar lst))))))))
+    ((null? lst) 0)
+    (else (+ (car lst) (+ (sum (cadr lst)) (sum (caddr lst))))))))
 
 (define preorder (lambda (lst)
-  (car lst)))
+  lst))
 
 (define left (lambda (lst)
-  (cadar lst)))
+  (cadr lst)))
 
 (define right (lambda (lst)
-  (caddar lst)))
+  (caddr lst)))
 
 (define t (consEmpty))
-(define t2 (consTree 10 (consTree 15 t t) t))
-(empty? t2)
-(empty? t)
-(sum t2)
-(preorder t2)
-(left t2)
-(right t2)
+(define t2 (consTree 'd (consTree 15 (consTree 14 t t) t) (consTree 14 t t)))
+;(empty? t2)
+;(empty? t)
+;(sum t2)
+;(preorder t2)
+;(left t2)
+;(right t2)
