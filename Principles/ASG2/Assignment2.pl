@@ -62,6 +62,16 @@ isvowel(e).
 isvowel(i).
 isvowel(o).
 isvowel(u).
+isvowel('0').
+isvowel('1').
+isvowel('2').
+isvowel('3').
+isvowel('4').
+isvowel('5').
+isvowel('6').
+isvowel('7').
+isvowel('8').
+isvowel('9').
 countconsonants(N, E) :- atom_chars(N, List), countC(List, E).
 countC([], 0).
 countC([H | T], E) :- not(isvowel(H)), countC(T, E1), E is E1 + 1.
@@ -83,3 +93,15 @@ eqv(9, nine).
 count(N, M, K) :- N =< M, N >= 0, eqv(N, A), K = A.
 count(N, M, K) :- N =< M, N < 0, ntoe(N, A), K = A.
 count(N, M, K) :- N < M, N1 is N+1, count(N1, M, K).
+
+ordered([X]).
+ordered([H | [H1 | T]]) :- H1 >= H, ordered([H1 | T]).
+
+reverse([], []).
+reverse([H | T], [G | H]) :- G is reverse(T).
+
+sum([], 0).
+sum([H | T], S) :- sum(T, S1), S is S1 + 1.
+
+append([], C, [C]).
+append([H | T], C, [R | G]) :- append(T, C, R).
