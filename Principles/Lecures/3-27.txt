@@ -1,0 +1,12 @@
+Overload Operators:
+Create new operators
+	C++ can do it
+	Java can not
+
+Assignment Statements
+	assignment := ALGOL68
+				= FORTRAN, BASIC, C-based languages
+	comparision = ALGOL68
+				== the others
+	C++ auto
+	C# var

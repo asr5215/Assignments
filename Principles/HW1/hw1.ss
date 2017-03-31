@@ -122,10 +122,4 @@
   (lambda (question)
     (write (helper question)) (newline) (interpreter (read))))
 
-;(interpreter (read))
-
-(define last-pair
-  (lambda (lst)
-    (cond
-      ((null? (cdr lst)) (car lst))
-      (else (last-pair (cdr lst))))))
+(interpreter (read))

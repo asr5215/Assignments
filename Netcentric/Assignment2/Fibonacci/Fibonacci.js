@@ -4,9 +4,9 @@ document.write("<h2>Date and time of run : " + d.toLocaleString() + " </h2>");
 document.write("<h3>Generating the first 50 Fibonacci numbers ... </h3>");
 var array = new Array(51);
 function fibonacci (number) {
-	//if (array [number] > 0){
-	//	return array[number];
-	//}
+	if (array [number] > 0){
+		return array[number];
+	}
 	if (number == 1){
 		return 0;
 	}

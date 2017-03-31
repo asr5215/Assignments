@@ -1,0 +1,4 @@
+Perl:
+	$_____ scalar variable
+	@_____ array
+	%_____ hashmap
