@@ -1,0 +1,7 @@
+enumeration-controlled
+	type and scope of the loop vaialbe
+	changes to bounds within loop
+	changes to loop variable within loop
+	changes to loop variable within loop
+	can controll enter or leave the loop value after the loop
+	

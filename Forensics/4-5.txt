@@ -1,0 +1,10 @@
+FS: File system information
+	block/sector
+	metadata
+	files
+fsstat -> file system stat
+bs in TSK is 1 sector
+
+use blkstat
+use blkcat
+use blkss
