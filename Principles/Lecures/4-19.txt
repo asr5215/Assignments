@@ -1,0 +1,8 @@
+ML - Polymorphic Types
+	we have a pL w/ functions that take 1 arg
+	fun curry a = fn b => a + b
+	fun add x y z = x + y + z
+	
+final exam:
+	little bit of scheme
+	focus on prolog and ml

@@ -1,0 +1,23 @@
+FAT system
+	directory entries
+	file allocation table
+		entry for each block/cluster
+FAT types
+	FAT12 bit
+	FAT16 bit
+	FAT32 bit
+	
+	Flag with sigma
+Why do we need this data structure?
+	find next allocated entry
+	look at bad sectors/what sectors cant be used
+	look at files/chain of pointers
+	
+File System Layout:
+	Reserved Area (contains Boot Sector, for FAT32 also contains copy of boot sector, also has FSInfo)
+	FAT
+	Data Area
+	
+Layout:
+	FAT12/FAT16 mostly the same
+	FAT32 different

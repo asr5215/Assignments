@@ -1,0 +1,53 @@
+MetaData Analysis:
+	MetaData lookup
+	Slack Space Analysis
+	Deleted File Recovery
+
+blkcat -> block analysis
+icat -> metadata analysis
+
+
+File Name: info.txt
+		|
+		v
+metadata [ ] icat
+		|
+		v
+contents(block) [ ] blkcat
+		|
+		v
+volume (sectors) [ ][ ]
+
+how to find order of created file: modified time/MAC time, or look for fragmentation/if a file points to different blocks and one is now currently being used,
+	the fragmented file is first, also if you try to recover a file and you cant it is normally due to overriding
+	
+use mactime w/ fls gives MAC information
+
+FAT:
+	old file system
+	simple instruction
+	still used with usb
+	
+FAT12, FAT16, FAT32
+ExFAT -> benefits from FAT32 and NTFS structure -> only for windows
+
+Directory: Music
+	3 files: song1.mp3, song2.mp3, list.txt
+	Boot Sector: FAT is located
+					allocation status
+					chain of use
+				 root directory
+				 
+Block Music
+1) . me
+2) .. parent
+3) song1.mp3 | start cluster 23 | size 3 MB
+
+FAT Structure
+	Why do we need this data structure? -> allows to search for content, unallocated/unallocated, and clusters
+	
+	FF7 means Bad Cluster
+	FF8-FFF means end cluster
+	FFF-FFF means EOF
+	
+FAT16 - max 65,525 clusters

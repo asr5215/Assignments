@@ -1,0 +1,10 @@
+Data Type:
+Strongly Typed Languages
+	Each name has a single type
+	Type errors are always detected
+
+Weakly Typed
+
+C, C++ 		Not strongly typed
+Java 		almost strongly typed 		type casting
+Scheme		yes
