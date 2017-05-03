@@ -1,5 +1,5 @@
 file system analysis:
-	hierarichal representation of files
+	hierarchial representation of files
 	
 file system: organization
 	file system

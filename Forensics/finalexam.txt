@@ -1,0 +1,13 @@
+Digitial evidence:
+	definition: files and data passed through a device
+	usage: used to link a device to a person
+	
+3 phases of investigation process of a digital crime
+	system preservation
+	evidence searching
+	event reconstruction
+	
+messge digest algorithm -> something that gives a value that changes when the thing is edited
+
+fat32 -
+	info hidden in fsinfo, backup, 
